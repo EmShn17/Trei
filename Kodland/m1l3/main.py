@@ -1,4 +1,12 @@
 import discord
+import random
+
+def yazi_tura():
+    para = random.randint(0, 2)
+    if para == 0:
+        return "Yazı Çıktı :)"
+    else:
+        return "Tura Çıktı :)"
 
 # ayricaliklar (intents) değişkeni botun ayrıcalıklarını depolayacak
 intents = discord.Intents.default()
@@ -25,6 +33,12 @@ async def on_message(message):
         await message.channel.send("\U0001f642")
     elif message.content.startswith('$senin adın ne'):
         await message.channel.send("Benim adım GreenCreeper ve ben bir discord botuyum!")
+    elif message.content.startswith('$en sevdiğin renk nedir'):
+        await message.channel.send("En sevdiğim renk tabikide yeşil.")
+    elif message.content.startswith('$kaç yaşındasın'):
+        await message.channel.send("Ben bir robot olduğum için yaşlanmıyorum.")
+    elif message.content.startswith('$coin'):
+        await message.channel.send(yazi_tura())
     elif message.content.startswith('$'):
         await message.channel.send("Bu komutu anlayamadım :(")
-client.run("MTE4MDIxMTQ1ODg3Nzk0Nzk5NA.GYAkG_.yHbucFlklERO_B6UnKj0ryj3haoZ89Zz53Fd1c")
+client.run("MTE4MDIxMTQ1ODg3Nzk0Nzk5NA.GnabUR.3wRRytM6rTNatfj31QTo7RvZNu8JzktF_aGE8Y")
